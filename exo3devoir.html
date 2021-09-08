@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <style>
+            /* Popup container */
+            .popup {
+                position: relative;  
+            }
+
+        /* le popup lui meme  */ 
+        .popup .popuptext {
+            visibility: hidden;
+            width: 500px;
+            height: 300px;
+            color: #fff;
+            text-align: left;
+            position: relative;
+            top : 50%;
+            left: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+            visibility: visible;
+        }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="popup" onclick="showpopup()"> 
+            <button id="cliquez sur moi !" class="btn btn-large btn-success"><i class="fa fa-flask"></i>cliquez sur moi !</button>
+        </div>
+
+        <script>
+
+            const citations = ["La vie est un mystère qu'il faut vivre, et non un problème à résoudre",
+                            "Choisissez un travail que vous aimez et vous n'aurez pas à travailler un seul jour de votre vie", 
+                            " Le travail, c'est le refuge des gens qui n'ont rien de mieux à faire ",
+                            "Le trop de confiance attire le danger","Le soupçon détruit la confiance niveau par niveau",
+                            "Amours nouvelles oublient les vieilles","Là où il y a du poil, il y a de la joie",
+                            "Il est facile de nager quand on vous tient le menton",
+                            "Les grands diseurs ne sont pas les grands faiseurs",
+                            "C'est peut-être de la peur qu'on a le plus souvent besoin pour se tirer d'affaire dans la vie"];
+            let random = null;
+            
+            function showpopup() {
+                    document.getElementById('cliquez sur moi !').addEventListener("click", function() 
+                    
+                    {random = Math.floor(Math.random() * citations.length);
+                    alert(citations[random]);
+                    });
+            }
+        </script>
+
+    </body>
+</html>
