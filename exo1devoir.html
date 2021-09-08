@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Exo 1 du devoir</title>
+    </head>
+    <body>
+        <script >
+            var characteremajuscule = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var charactereminiscule = "abcdefghijklmnopqrstuvwxyz";
+            var characterspeciaux = "%&!$*/?@#)(£";
+            var chiffres = "0123456789";
+            var resultat = '';
+
+            function generationdumdp (nbcaracteredumdp){
+                // concatener toutes les caractères déjà déclarés 
+                var ensembledescaracteres = characteremajuscule.concat( charactereminiscule, characterspeciaux ,chiffres );
+                // choisir parmis les caractère d'une manière aléatoire avec une boucle for qui va jusqu'a la taille du mdp
+                for( var i = 0; i <nbcaracteredumdp; i++){
+                    resultat += ensembledescaracteres.charAt(Math.floor(Math.random() * ensembledescaracteres.length)); 
+                }
+                return resultat;
+            }
+            console.log(generationdumdp(8));
+        </script>
+    </body>
+</html>
