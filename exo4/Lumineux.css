@@ -1,0 +1,13 @@
+body{
+	background-color: rgb(230, 224, 224);
+}
+
+
+#container{
+	width: 400px;
+	margin: 0 auto;
+	border: 2px solid rgb(230, 224, 224);
+	border-radius: 3px;
+	text-align: center;
+}
+
