@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Exo 5 du devoir</title>
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            
+            body {
+                background-color :rgb(179, 230, 172);
+            }
+            
+            .topnav {
+              overflow: hidden;
+              background-color: rgb(20, 150, 18);
+              position: relative;
+            }
+            
+            .topnav a.icon {
+              float: left ;
+            }
+            
+            .topnav a {
+              float: Right;
+              color:rgb(12, 12, 12);  
+              padding: 10px 10px;
+              text-decoration: none;
+              font-size: 22px;
+            }
+            
+            
+            .topnav a:hover {
+              background-color: rgb(20, 150, 18);
+              color: rgb(240, 231, 231);
+            }
+            
+            </style>
+    </head>
+    <body>
+        
+        <div class="topnav">
+            <div id="myLinks">
+              <a href="#Accueil">Accueil</a>
+              <a href="#Guide">Guide</a>
+              <a href="#Viva l'algérie">VIVA L'ALGERIE</a>
+              <a href="#123">123</a>
+            </div>
+            <a href="javascript:void(0);" class="icon" onclick="MenuFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+        <script>
+            function MenuFunction() {
+            var x = document.getElementById("myLinks");
+            if (x.style.display === "block") {
+            // pour masquer le menu
+            x.style.display = "none";
+            } else {
+            //pour afficher le menu
+            x.style.display = "block";
+  }
+}
+        </script>
+    </body>
+</html>
+
