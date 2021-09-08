@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exo 4 du devoir</title>
+	<link id="darklight" rel="stylesheet" type="text/css" href="sombre.css">
+</head>
+<body>
+
+	<div id="container">
+		<!--configuration des boutons pour changer de mode au click -->
+		<button class="btn btn-lumineux" onclick="swapmode('lumineux.css')">Light</button>
+		<button class="btn btn-sombre" onclick="swapmode('sombre.css')">Dark</button>
+	</div>
+
+
+	<script >
+
+		var setTheme = localStorage.getItem('theme');
+
+		if (setTheme == null){
+			swapmode('sombre.css');
+		}else{
+			swapmode(setTheme);
+		}
+		// pour changer le mode.
+		function swapmode(page){
+			document.getElementById('darklight').href = page;
+			localStorage.setItem('theme', page);
+		}
+		
+	</script>
+</body>
+</html>
